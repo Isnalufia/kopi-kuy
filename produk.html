@@ -86,7 +86,7 @@
             </div>
 
             <div class="row" id="baris_produk">
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <div class="card">
                         <img src="images/produk/product_capuchino.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -166,7 +166,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -215,12 +215,12 @@
 
 
         select_kopi.onchange = function () {
-            var dipilih = select_kopi.value
+            var dipilih = this.value
             //console.log("yang dipilih adalah = " + dipilih)
 
-            var template = ``
+            var template = ""
 
-            $.getJSON(sumber2).then(function (data) {
+            $.get(sumber2).then(function (data) {
                 var data_kopi = data[dipilih]
 
                 data_kopi.forEach(kopi => {
